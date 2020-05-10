@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Interface Buildering"
+date: 2020-02-04
+---
+
+On [@atpfm](https://atp.fm/episodes/362) recently,[ @siracusa](https://twitter.com/siracusa) described his "Xcode layout hell" attempting to build a UI using Interface Builder in Xcode. Siracusa found it incredibly difficult to use **autolayout in Interface Builder** and was unable to make a pixel-perfect UI for his app's about screen. This echoes my experience. Having just finished reworking a key UI element for my app, I've repeated exactly the same evolution as I always go through. I start by trying to conquer autolayout in Interface Builder like a good Xcode developer should. Eventually, I get enough right that I start to believe that I can do it. But then I can't get rid of the last few red errors and notice duplicate constraints everywhere. I have no idea how to add a certain constraint using just the GUI so I have to add a dummy constraint in order to hand edit it to what I want. This is getting narly.
+
+Time to switch to **UIStackView**. Forget autolayout; just put everything into a stack view and nest away until you get to where you need to be. The theory is that you should work from the inside out and stack things together to control spacing and alignment where needs be. Again this nearly succeeds but I end up with an impossible-to-navigate hierarchy of stack views without knowing how they are really interacting together. I consistently fail to get a UILabel to expand how I want it to. I'm not really in control of this am I?
+
+Finally, after briefly considering hosting a SwiftUI view, I go back to hand-coding autolayout constraints. But this time rather than struggle with the difficult API Apple provides, I used [Stevia](https://github.com/freshOS/Stevia), which is about as good an autolayout wrapper that I've found. Thank you, [Hacking with Swift](https://www.hackingwithswift.com/articles/9/best-alternatives-to-auto-layout), for the tip. Having been to war with autolayout in Interface Builder, and tried to hand-roll my own layout using NSLayoutConstraint, I know enough about what **Stevia** is doing to be confident. It just seems to throw up less conflicts out of the box which is cool. If you are struggling to get a UI working I'd recommend giving it a whirl.
