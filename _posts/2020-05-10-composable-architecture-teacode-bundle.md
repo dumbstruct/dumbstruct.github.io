@@ -10,7 +10,7 @@ The whole point of TCA is that it is composable so you end up with a lot of **st
 To help, I made some TeaCode expanders. Now that TCA has had it's first release I've adapted my expanders and am sharing them [here](/assets/teacodebundles/ComposableArchitecture.tcbundle.zip).
 
 <video width="320" height="240" controls>
-  <source src="/assets/TeaCodeCA.m4v" type="video/mp4">
+  <source src="/assets/TeaCodeCA.m4v" type="video/m4v">
   <source src="movie.ogg" type="video/ogg">
   Your browser does not support the video tag.
 </video>
