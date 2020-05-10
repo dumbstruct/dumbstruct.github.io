@@ -1,2 +1,8 @@
 theme: jekyll-theme-tactile
 title: Dumb Struct
+defaults:
+  - scope:
+      path: "assets/teacodebundles"
+    values:
+	  teacodebundle: true
+	  	
