@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 ## Dumb Struct
 
 <ul>
