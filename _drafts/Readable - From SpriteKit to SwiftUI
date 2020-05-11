@@ -1,0 +1,3 @@
+Readable - From SpriteKit to SwiftUI
+
+Readable is an app that whilst being all about text, actually renders out as images which is why I originally chose SpriteKit as the renderer. But at the end of the summer I was hitting some issues with PageViewController performance and contemplating switching to a ScrollView. Since this would be quite a bit of work, I decided to see if I could use SwiftUI or whether it would buckle under the demands I was making of it.I’m happy to say that not only did SwiftUI handle the task easily, it has also been a joy to work with. Mostly.

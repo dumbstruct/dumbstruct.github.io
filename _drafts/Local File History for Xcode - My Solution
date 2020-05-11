@@ -1,0 +1,26 @@
+"Aaargh. I just lost the changes in that file."Have you ever discarded ALL changes only to find that you really wanted SOME of the changes?I have and having just spent a morning restoring a file to its former glory I've implemented a solution to help prevent losing my uncommitted changes again.You will need Xcode and git installed and you should feel confident with the terminal.For my example, I will assume that you have a development folder named "Development" in your user directory. i.e. ~/Development## Step 1    --   create a backup folder
+I'm using ~/DevelopmentBackup as my backup folder in the example.Open a Terminal window and enter the following commands:```
+> mkdir ~/DevelopmentBackup
+```
+## Step 2    --   copy the files for the first time
+```
+> rsync -r --exclude=.git ~/Development ~/DevelopmentBackup
+```
+## Step 3    --    initialise the backup
+```
+> cd ~/DevelopmentBackup
+> git init
+> git add -A
+> git commit -m "First backup"
+```
+## Step 4    --    add a run script to your project build phase
+Now we have set up the git repository that we are going to use to store changes, we need to set up Xcode to keep the file changes tracked.1. Open your project in Xcode
+2. Select the project in the Navigator pane
+3. Select Build Phases
+4. Add a new Run Script Phase by clicking the "+" button and selecting "New Run Script Phase"
+5. Type the following into the script window:```
+NOW=$(date +"%Y-%m-%d_%H%M")PROJECTS_DIR=$HOME/Documents/Development/Projects
+BACKUPS_DIR=$HOME/Documents/DevelopmentBackup/Projectsrsync -ru --exclude=.git $PROJECTS_DIR/ $BACKUPS_DIRcd $BACKUPS_DIR
+git add -A
+git commit --allow-empty -m "Backup: $NOW"
+```Now whenever you build the project, the backup script should run. It works by copying the entire development folder into the backup folder (stripping out the .git files used for your normal source control) and then committing all changes. The good news is that if you keep the Run Script as the final Build Phase, it will only backup successful builds. However, if you want to backup more often you can drag the Run Script up to an earlier phase.I have multiple projects in my Development folder so this script backs them all up at the same time. If you have a huge number of projects going at once, you might want to optimise this so you only backup your currently active project.You can view changes using "git log" or your preferred git viewer such as Tower or SourceTree.*This article was originally posted on [Medium](https://medium.com/@andy_41059/local-file-history-for-xcode-my-solution-a869c0bb2188), January 2nd 2017*
