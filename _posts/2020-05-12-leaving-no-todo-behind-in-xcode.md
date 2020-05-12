@@ -25,7 +25,7 @@ into:
 Going even further, you could create a TODO() function that outputs the TODOD in the console liek so:
 
 	func TODO(_ todo: String) {
-    	os_log(.info, "TODO: %s", todo)
+      os_log(.info, "TODO: %s", todo)
 	}
 
 And add that to your expander or snippet so you expand into:
