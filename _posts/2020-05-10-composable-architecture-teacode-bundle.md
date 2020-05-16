@@ -10,7 +10,7 @@ I've been working with [The Composable Architecture](https://github.com/pointfre
 The whole point of TCA is that it is composable so you end up with a lot of **states, actions, stores, and reducers** throughout your code.
 To help, I made some TeaCode expanders. Now that TCA has had it's first release I've adapted my expanders and am sharing them [here](/assets/teacodebundles/ComposableArchitecture.tcbundle.zip).
 
-<video width="600" height="450" controls>
+<video width="320" height="240" controls>
   <source src="/assets/videos/TeaCodeCA.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
