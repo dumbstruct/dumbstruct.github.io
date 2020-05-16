@@ -1,5 +1,6 @@
-theme: jekyll-theme-minimal
 title: Dumb Struct
+logo: /assets/img/logo.png
+description: by Andrew Eades
 show_downloads: true
-latest_composable_architecture_teacode:
-  zip_url: http://www.dumbstruct.com/assets/teacodebundles/TeaCodeDumbStruct.tcbundle.zip
+google_analytics:
+theme: jekyll-theme-minimal
