@@ -5,4 +5,4 @@ show_downloads: true
 google_analytics:
 theme: jekyll-theme-minimal
 latest_composable_architecture_teacode:
-	zip_url: http://www.dumbstruct.com/assets/teacodebundles/TeaCodeDumbStruct.tcbundle.zip
+  zip_url: http://www.dumbstruct.com/assets/teacodebundles/TeaCodeDumbStruct.tcbundle.zip
