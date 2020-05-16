@@ -2,6 +2,7 @@
 layout: post
 title: "dumbStruct.first"
 date: 2020-01-18
+tags: Swift
 ---
 
 Welcome to Dumb Struct by Andrew Brian. Dumb Struct is intended to be my blog about Swift. I've been using Swift almost every day since Chris Lattner announced it at WWDC '14. I was lucky enough to be in the audience that day and remember the surprise and excitement I felt from day 1. Every day, I learn more and get deeper into what you can express in the language. Emphatically, I don't think Swift is a dick. However, it is so powerful and feature-rich now it is harder to think of it as an easy language than when it was launched.

@@ -2,6 +2,7 @@
 layout: post
 title: "Interface Buildering"
 date: 2020-02-04
+tags: Xcode
 ---
 
 On [@atpfm](https://atp.fm/episodes/362) recently,[ @siracusa](https://twitter.com/siracusa) described his "Xcode layout hell" attempting to build a UI using Interface Builder in Xcode. Siracusa found it incredibly difficult to use **autolayout in Interface Builder** and was unable to make a pixel-perfect UI for his app's about screen. This echoes my experience. Having just finished reworking a key UI element for my app, I've repeated exactly the same evolution as I always go through. I start by trying to conquer autolayout in Interface Builder like a good Xcode developer should. Eventually, I get enough right that I start to believe that I can do it. But then I can't get rid of the last few red errors and notice duplicate constraints everywhere. I have no idea how to add a certain constraint using just the GUI so I have to add a dummy constraint in order to hand edit it to what I want. This is getting narly.

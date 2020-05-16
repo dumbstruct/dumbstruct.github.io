@@ -2,6 +2,7 @@
 layout: post
 title: "Leaving no TODO behind in Xcode"
 date: 2020-05-12
+tags: Xcode
 ---
 
 In Xcode, you can make TODO and MARK comments that you can see in both the Jump Bar and the new minimap.
